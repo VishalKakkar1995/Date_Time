@@ -1,0 +1,16 @@
+DoB = pd.Series(["07Sep59","01Jan55","15Dec47","11Jul42"])
+
+Make sure that the year is 19XX not 20XX
+
+
+
+from datetime import datetime
+import pandas as pd
+import numpy as ny
+
+
+DoB= pd.Series(["07Sep59","01Jan55","15Dec47","11Jul42"])
+
+DoB = DoB.str[:-2]+'19'+DoB.str[-2:]
+
+pd.to_datetime(DoB,format='%d%b%Y')
