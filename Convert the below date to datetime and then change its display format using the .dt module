@@ -1,0 +1,18 @@
+Date = "15Dec1989"
+
+Result : "Friday, 15 Dec 98"
+
+
+
+from datetime import datetime
+import pandas as pd
+import numpy as ny
+
+
+Date = "15Dec1989"
+
+a=pd.to_datetime(Date)
+
+b=a.strftime("%A, %d %b %y")
+
+print("Result: ",b)
