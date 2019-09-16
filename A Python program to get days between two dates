@@ -1,0 +1,13 @@
+
+from datetime import datetime
+import pandas as pd
+import numpy as ny
+
+
+a=pd.to_datetime('22-02-2019',format='%d-%m-%Y')
+
+b=pd.to_datetime('3-09-2019',format='%d-%m-%Y')
+
+c=b-a
+
+print("The difference between the two days is ",c.days)
