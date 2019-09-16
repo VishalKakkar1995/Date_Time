@@ -1,0 +1,106 @@
+1. Write a Python script to display the
+a. Current date and time
+b. Current year
+c. Month of year
+d. Week number of the year
+e. Weekday of the week
+f. Day of year
+g. Day of the month
+h. Day of week
+
+
+
+from datetime import datetime
+from datetime import date
+from datetime import time
+
+import pandas as pd
+import numpy as ny
+
+
+#1.a Current date and time
+
+today=date.today()
+
+
+print("Todays date using date library is --",today)
+
+
+todayn=datetime.now()
+
+print("Todays date using datetime library and now fn is --",todayn)
+
+
+time=datetime.time(datetime.now())
+
+
+print("Current time using datetime library is --",time)
+
+
+
+
+#1.b Current Year
+
+print("Current Year is ----  ",todayn.year)
+
+print("\n")
+
+print("The year is",today.strftime("%Y"),"Using Strftime ")
+
+
+
+
+
+#1.c Current Month
+
+M=todayn.month
+
+Month=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+
+print(" Current Month is - ",Month[M-1],"\n","Which is reprsented by number - ",M)
+
+print(" Current month using Strftime - ",today.strftime("%B"))
+
+
+
+
+#1.d Week number of the year
+
+print("The current week is -",todayn.strftime("%V"), "for date", today)
+
+
+
+
+#1.e  Weekday of the week
+
+print("Today is",todayn.strftime("%A"))
+
+
+
+
+#1.f Day of year
+
+print("Today is",today.day,"Using general syntax")
+
+print("\n")
+
+print("Today is",today.strftime("%d"),"Using Strftime ")
+
+
+
+
+
+#1.g Day of the month
+
+print("The month is ",today.month,"Using general syntax i.e.",today.strftime("%b"))
+
+print("\n")
+
+print("The month is",today.strftime("%m"),"Using Strftime i.e.",today.strftime("%b"))
+
+
+
+
+#1.h Day of week
+
+print("The day is ",today.strftime("%A"))
