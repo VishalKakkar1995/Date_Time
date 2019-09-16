@@ -1,0 +1,17 @@
+from datetime import datetime
+import pandas as pd
+import numpy as ny
+
+
+
+current_date=pd.to_datetime('2015-06-22',format='%Y-%m-%d')
+
+t1=pd.DateOffset(-5)
+
+new_date=current_date+t1
+
+print("The original date was ",current_date)
+
+print("\n")
+
+print("The new date is ",new_date)
