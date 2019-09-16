@@ -1,0 +1,11 @@
+from datetime import datetime
+from datetime import date
+from datetime import time
+
+import pandas as pd
+import numpy as ny
+
+
+q1=pd.to_datetime('Jan 1 2014 2:43PM')
+
+print(q1)
